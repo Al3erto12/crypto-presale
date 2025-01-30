@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Presale</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fdfbe6;
+            color: #000;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .presale {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .wallet-address {
+            font-size: 1rem;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .copy-btn {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .logos img {
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="image.png" alt="Crypto Image">
+        </div>
+        <div class="title">My Crypto</div>
+        <div class="subtitle">The Next Big Token</div>
+        <div class="presale">Presale Live - Send Funds To:</div>
+        <div class="wallet-address" id="wallet">your_wallet_address_here</div>
+        <button class="copy-btn" onclick="copyAddress()">Copy</button>
+        
+        <div class="logos">
+            <img src="coinmarketcap.png" alt="CoinMarketCap">
+            <img src="coinbase.png" alt="Coinbase">
+            <img src="bitget.png" alt="Bitget">
+            <img src="kucoin.png" alt="Kucoin">
+            <img src="coindesk.png" alt="Coindesk">
+        </div>
+    </div>
+
+    <script>
+        function copyAddress() {
+            var walletText = document.getElementById("wallet").textContent;
+            navigator.clipboard.writeText(walletText);
+            alert("Wallet address copied!");
+        }
+    </script>
+</body>
+</html>
